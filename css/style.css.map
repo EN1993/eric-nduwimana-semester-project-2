@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AGAA,AAAA,IAAI,CAAC;EACH,UAAU,EFGI,OAAO;CEFtB",
+    "sources": [
+        "../sass/style.scss",
+        "../sass/partials/_variables.scss",
+        "../sass/partials/_nav.scss",
+        "../sass/partials/_base.scss",
+        "../sass/partials/_typography.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}

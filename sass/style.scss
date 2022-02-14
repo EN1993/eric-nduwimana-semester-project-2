@@ -1,3 +1,5 @@
-body {
-  background: blue;
-}
+
+@import"./partials/variables";
+@import"./partials/nav";
+@import"./partials/base";
+@import"./partials/typography";

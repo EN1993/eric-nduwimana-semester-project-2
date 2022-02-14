@@ -1,0 +1,15 @@
+$colours: (
+  primary-color: #b0800a,
+  secondary-color: #7997f7,
+  third-color: #ffffff,
+  fourth-color: #0d0d0d,
+);
+
+$primary-font: "Poppins", sans-serif;
+$secondary-font: "IBM Plex Serif", serif;
+
+@function getColour($colour) {
+  @return map-get($colours, $colour);
+}
+
+$tablet-width: 750px;
