@@ -26,12 +26,15 @@ nav {
   height: 100%;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 1109px) {
   nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     position: static;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 
@@ -39,7 +42,7 @@ nav li {
   display: block;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 1109px) {
   nav li {
     display: inline-block;
     position: relative;
@@ -63,7 +66,7 @@ li a:hover {
   color: #ffb500;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 1109px) {
   li a {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -84,11 +87,11 @@ li a:hover {
   display: none;
 }
 
-#humburger-menu {
+#hamburger-menu {
   display: none;
 }
 
-#humburger-menu:checked ~ nav {
+#hamburger-menu:checked ~ nav {
   display: block;
 }
 
@@ -129,21 +132,25 @@ li a:hover {
 .search-form ::-webkit-input-placeholder {
   background: black;
   color: white;
+  font-size: 25px;
 }
 
 .search-form :-ms-input-placeholder {
   background: black;
   color: white;
+  font-size: 25px;
 }
 
 .search-form ::-ms-input-placeholder {
   background: black;
   color: white;
+  font-size: 25px;
 }
 
 .search-form ::placeholder {
   background: black;
   color: white;
+  font-size: 25px;
 }
 
 .search-form input {
@@ -153,7 +160,7 @@ li a:hover {
   border-bottom: 2px solid #ffffff;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 1109px) {
   header label {
     display: none;
   }
@@ -169,6 +176,7 @@ li a:hover {
   .logo img {
     height: 50px;
     display: block;
+    margin-left: 60px;
   }
   .search-form {
     display: inline;
@@ -187,6 +195,7 @@ li a:hover {
 
 body {
   background: #0d0d0d;
+  margin: 0 auto;
 }
 
 li a,

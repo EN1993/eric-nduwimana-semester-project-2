@@ -21,6 +21,7 @@ nav {
   @media (min-width: $tablet-width) {
     display: flex;
     position: static;
+    justify-content: space-evenly;
   }
 }
 
@@ -56,10 +57,10 @@ li a {
   display: none;
 }
 
-#humburger-menu {
+#hamburger-menu {
   display: none;
 }
-#humburger-menu:checked ~ nav {
+#hamburger-menu:checked ~ nav {
   display: block;
 }
 
@@ -91,7 +92,8 @@ li a {
   ::placeholder {
     background: darken(getColour(fourth-color), 10%);
     color: white;
-    
+    font-size: 25px;
+  }
 }
 
 .search-form input {
@@ -120,6 +122,7 @@ li a {
   .logo img {
     height: 50px;
     display: block;
+    margin-left: 60px;
   }
 
   .search-form {
