@@ -1,0 +1,51 @@
+.footer-info {
+  width: 300px;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: getColour(primary-color);
+  font-size: 22px;
+}
+.footer-contact{
+  color: getColour(secondary-color);
+}
+.footer-social {
+  display: flex;
+  gap: 10px;
+
+  .fa-facebook,
+  .fa-play-circle {
+    font-size: 28px;
+  }
+}
+
+.footer-subscribe {
+  display: block;
+
+  .email-subscribe {
+    @extend .subscribe-common;
+    width: 200px;
+    height: 30px;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  .subscribe-common {
+    border: 3px solid getColour(primary-color);
+    color: darken(getColour(primary-color), 10%);
+  }
+  .subscribe-btn {
+    @extend .subscribe-common;
+    width: 209px;
+    height: 35px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 21px;
+    &:hover {
+      background: getColour(primary-color);
+      color: getColour(third-color);
+    }
+  }
+}
