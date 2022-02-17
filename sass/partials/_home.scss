@@ -7,3 +7,18 @@
   height: 300px;
   width: 100%;
 }
+
+h2{
+  color: getColour(third-color);
+  text-align: center;
+}
+.featured-container{
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.featured{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

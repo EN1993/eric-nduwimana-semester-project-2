@@ -231,6 +231,27 @@ main {
   width: 100%;
 }
 
+h2 {
+  color: #ffffff;
+  text-align: center;
+}
+
+.featured-container {
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.featured {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 li a,
 .login-txt,
 .cta {
@@ -301,5 +322,28 @@ body {
 .footer-subscribe .subscribe-btn:hover {
   background: #ffb500;
   color: #ffffff;
+}
+
+main {
+  padding-top: 20px;
+}
+
+h2 {
+  color: #7997f7;
+}
+
+.shop-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  background: #ffffff;
+}
+
+.shop {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */
