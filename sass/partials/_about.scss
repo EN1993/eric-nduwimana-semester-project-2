@@ -1,0 +1,36 @@
+.about-container {
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+h3 {
+  text-align: center;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.about-1 {
+  max-width: 470px;
+  padding: 10px;
+}
+
+.aboutus-txt {
+  color: getColour(primary-color);
+  width: 300px;
+  line-height: 1.7;
+}
+.about-picture img {
+  width: 300px;
+}
+
+@media (min-width: 500px) {
+  .aboutus-txt,
+  .about-picture img {
+    width: 470px;
+  }
+}
