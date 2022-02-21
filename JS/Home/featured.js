@@ -14,7 +14,7 @@ async function featuredPosts(url) {
 
  featuredContainer.innerHTML += `
    <div class='featured-picture' style="background-image:url(${resolvedResponse[0].image})"></div>
-   <h3>${resolvedResponse.title}</h3>
+   <h3>${resolvedResponse[0].title}</h3>
    <p></p>
   `
   
