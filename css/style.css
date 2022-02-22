@@ -242,7 +242,7 @@ h2 {
 
 .featured-container {
   max-width: 1000px;
-  margin: 20px auto;
+  margin: 50px auto;
 }
 
 .featured {
@@ -254,15 +254,23 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 20px;
 }
 
 h3 {
-  color: white;
+  color: #0d0d0d;
+}
+
+figcaption {
+  background: #ffb500;
+  padding: 1px;
 }
 
 .featured-picture {
   width: 300px;
   height: 300px;
+  background-size: cover;
+  background-position: center;
 }
 
 li a,
@@ -362,6 +370,8 @@ h2 {
 .about-container {
   max-width: 1000px;
   margin: 40px auto;
+  position: relative;
+  top: 40px;
 }
 
 h3 {
