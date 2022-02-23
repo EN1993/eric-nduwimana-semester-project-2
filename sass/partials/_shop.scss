@@ -3,6 +3,18 @@
 // }
 h2 {
   color: getColour(secondary-color);
+  font-size: 35px;
+}
+
+h4 {
+  color: getColour(secondary-color);
+  font-size: 22px;
+  margin-top: 7px;
+}
+.shop-price {
+  position: relative;
+  bottom: 22px;
+  font-size: 18px;
 }
 
 .shop-container {
@@ -15,8 +27,10 @@ h2 {
 }
 
 .shop {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
-  margin: 0 auto;
+  margin-bottom: 100px;
+  padding-bottom: 34px;
 }

@@ -238,11 +238,12 @@ main {
 h2 {
   color: #ffffff;
   text-align: center;
+  font-size: 34px;
 }
 
 .featured-container {
   max-width: 1000px;
-  margin: 50px auto;
+  margin: 50px auto 130px auto;
 }
 
 .featured {
@@ -347,6 +348,19 @@ body {
 
 h2 {
   color: #7997f7;
+  font-size: 35px;
+}
+
+h4 {
+  color: #7997f7;
+  font-size: 22px;
+  margin-top: 7px;
+}
+
+.shop-price {
+  position: relative;
+  bottom: 22px;
+  font-size: 18px;
 }
 
 .shop-container {
@@ -359,12 +373,17 @@ h2 {
 }
 
 .shop {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 10px;
-  margin: 0 auto;
+  margin-bottom: 100px;
+  padding-bottom: 34px;
 }
 
 .about-container {

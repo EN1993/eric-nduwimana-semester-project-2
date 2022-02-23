@@ -1,4 +1,6 @@
-const baseUrl ='http://localhost:1337';
+
+import { baseUrl } from "../api.js";
+// const baseUrl ='http://localhost:1337';
 const heroBannerContainer = document.querySelector(".hero-banner");
 
 async function heroBannerPost(url) {
