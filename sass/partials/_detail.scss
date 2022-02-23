@@ -1,0 +1,17 @@
+.detail-container{
+  max-width: 1000px;
+  margin: 20px auto;
+  background: getColour(third-color);
+  position: relative;
+  top: 20px;
+  padding-top: 1px;
+}
+
+.detail{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 100px;
+  padding-bottom: 34px;
+}

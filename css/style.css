@@ -430,4 +430,27 @@ h3 {
     width: 470px;
   }
 }
+
+.detail-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  background: #ffffff;
+  position: relative;
+  top: 20px;
+  padding-top: 1px;
+}
+
+.detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  margin-bottom: 100px;
+  padding-bottom: 34px;
+}
 /*# sourceMappingURL=style.css.map */

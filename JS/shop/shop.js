@@ -14,14 +14,17 @@ async function shopPosts(url) {
   resolvedResponse.map(function (currentItem) {
 
 
-    shopContainer.innerHTML += ` <div>
+    shopContainer.innerHTML += ` 
+                                
+                            <a href="detail.html?id=${currentItem.id}">
+                                <div>
                                   <div class='featured-picture' style="background-image:url(${baseUrl}${currentItem.image.url})"></div>
                                   <h4>${currentItem.title}</h4>
                                   <p class="shop-price">Price: $${currentItem.price}</p>
                                           
-  
-  
-                                </div>`
+                                </div>
+                                                         
+                            </a> `
     
     })
    
