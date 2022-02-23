@@ -1,5 +1,5 @@
-import { baseUrl } from "../api.js";
-// const baseUrl ='http://localhost:1337';
+
+const baseUrl ='http://localhost:1337';
 const shopContainer = document.querySelector(".shop");
 
 async function shopPosts(url) {
