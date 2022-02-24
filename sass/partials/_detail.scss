@@ -33,7 +33,8 @@
 
 .detail-btn {
   border: 3px solid getColour(primary-color);
-  color: getColour(primary-color);
+  background: getColour(primary-color);
+  color: getColour(third-color);
   width: 209px;
   height: 35px;
   margin-top: 5px;
@@ -42,7 +43,7 @@
   position: relative;
   bottom: 37px;
   &:hover {
-    background: getColour(primary-color);
-    color: getColour(third-color);
+    color: getColour(primary-color);
+    background: getColour(third-color);
   }
 }

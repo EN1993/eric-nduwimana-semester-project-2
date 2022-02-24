@@ -473,7 +473,8 @@ h3 {
 
 .detail-btn {
   border: 3px solid #ffb500;
-  color: #ffb500;
+  background: #ffb500;
+  color: #ffffff;
   width: 209px;
   height: 35px;
   margin-top: 5px;
@@ -484,7 +485,7 @@ h3 {
 }
 
 .detail-btn:hover {
-  background: #ffb500;
-  color: #ffffff;
+  color: #ffb500;
+  background: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
