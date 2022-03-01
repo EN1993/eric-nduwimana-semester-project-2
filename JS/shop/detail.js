@@ -2,42 +2,72 @@ const querystring = document.location.search;
 const parms = new URLSearchParams(querystring);
 const id = parms.get("id");
 
-const baseUrl ='http://localhost:1337';
-
+// const baseUrl ='http://localhost:1337';
+import { baseUrl } from "../api.js";
+import displayMessage from "../components/displayMessage.js";
 const detailContainer = document.querySelector(".detail");
 
+let cartArray = [];
+
 async function shopDetail(url) {
+  try {
+    // JS Reads code top to bottom, left to right
+    // back ticks are a new feature for string in javascript
+    // Purpose it to make writing multiline strings easy and readable
+    
 
+    const productsUrl = `${url}/products/${id}`;
+    const productsResponse = await fetch(productsUrl);
+    const resolvedResponse = await productsResponse.json();
+    // console.log(resolvedResponse);
 
-  // JS Reads code top to bottom, left to right
-  // back ticks are a new feature for string in javascript
-  // Purpose it to make writing multiline strings easy and readable
-  const string1 = "something"
-  const string2 = 'something'
-  const string = `something`
-
-  
-  const productsUrl = `${url}/products/${id}`;
-  const productsResponse = await fetch(productsUrl);
-  const resolvedResponse = await productsResponse.json() 
-  console.log(resolvedResponse);
-
-
+    const imageUrl = `${baseUrl}${resolvedResponse.image.url}`;
+    const price = resolvedResponse.price;
+    const title = resolvedResponse.title;
+    const description = resolvedResponse.description;
     detailContainer.innerHTML += ` <div  class=" detail--content">
-                                    <div class='detail-picture' style="background-image:url(${baseUrl}${resolvedResponse.image.url})"></div>
+                                    <div class='detail-picture' style="background-image:url(${imageUrl})"></div>
                                    
                                     <div class=" detail-content"> 
-                                      <h4>${resolvedResponse.title}</h4>
-                                      <p class="shop-price">Price: $${resolvedResponse.price}</p>
+                                      <h4>${title}</h4>
+                                      <p class="shop-price">Price: $${price}</p>
                                       <p class="detail-description"><b> Description:</b> <br>
-                                        ${resolvedResponse.description}
+                                        ${description}
                                       </p>
-                                      <button class="cta detail-btn"> Add To Cart </button> 
+                                      <button id="addToCart" class="cta detail-btn" data-product="${resolvedResponse.id}"> Add To Cart </button> 
                                     </div> 
-                                  </div>`
-    
- 
+                                  </div>`;
 
- 
+    return {
+      imageUrl,
+      price,
+      title,
+    };
+  } catch (error) {
+    console.log(error);
+    displayMessage("error", error, ".detail");
+  }
 }
-shopDetail(baseUrl);
+
+shopDetail(baseUrl).then((product) => {
+  const addToCartBtn = document.getElementById("addToCart");
+
+  const addToCartHandler = (event) => {
+   
+
+    const newItems = [];
+    const oldItem = localStorage.getItem("cart");
+    const parsedOldItem = JSON.parse(oldItem); 
+    if (parsedOldItem) {
+      newItems.push(...parsedOldItem);
+    }
+    newItems.push(product);
+    localStorage.setItem("cart", JSON.stringify(newItems));
+    const cartCountElement = document.getElementById("cartCount");
+    if (cartCountElement) {
+      cartCountElement.innerHTML = newItems.length;
+    }
+  };
+
+  addToCartBtn.addEventListener("click", addToCartHandler);
+});

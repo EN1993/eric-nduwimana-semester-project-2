@@ -1,16 +1,7 @@
 // main {
 //   padding-top: 20px;
 // }
-h2 {
-  color: getColour(secondary-color);
-  font-size: 35px;
-}
 
-h4 {
-  color: getColour(secondary-color);
-  font-size: 22px;
-  margin-top: 7px;
-}
 .shop-price {
   position: relative;
   bottom: 22px;
@@ -33,4 +24,24 @@ h4 {
   gap: 10px;
   margin-bottom: 100px;
   padding-bottom: 34px;
+}
+
+.view-more-btn {
+  border: 3px solid getColour(primary-color);
+  color: getColour(fourth-color);
+  width: 300px;
+  height: 95px;
+  font-weight: bold;
+  font-size: 30px;
+  position: relative;
+  bottom: 202px;
+  display: none;
+ 
+}
+.shop-content:hover{
+  
+    .view-more-btn{
+      display: block;
+    }
+      
 }

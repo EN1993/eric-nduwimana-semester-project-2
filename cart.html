@@ -24,7 +24,7 @@
         <li><a href="contact.html" >Contact</a></li>
         <form class="search-form" ><input type="text"placeholder="Search"><i class="fas fa-search"></i></form>
         <li><a href="login.html" ><i class="fas fa-user-circle"> <span class="login-txt">Log in</span> </i></a></li>
-        <li><a href="cart.html" class="active" ><i class="fas fa-shopping-basket"> <span class="basket-count"> 0 </span></i></a></li>
+        <li><a href="cart.html" class="active" ><i class="fas fa-shopping-basket"> <span id="cartCount" class="basket-count"></span></i></a></li>
       </ul>
     </nav>
   </header>
@@ -35,11 +35,12 @@
         <div class="cart">
           <div class="cart-content">
             <h3>Cart List</h3>
+            <div class="cart-list"></div>
 
           </div>
           <div class="cart-content">
             <h3>Subtotal</h3>
-
+            <div class="total"></div>
           </div>
         </div>
       </section>
@@ -70,6 +71,6 @@
       </div>
     </div>
   </footer>
-  <script src="JS/shop/detail.js" type="module"></script>
+  <script src="JS/shop/cart.js" type="module"></script>
 </body>
 </html>

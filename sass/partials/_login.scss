@@ -1,0 +1,36 @@
+.admin-section {
+  padding-top: 19px;
+  margin: 0 auto;
+  max-width: 500px;
+}
+.admin-container {
+  max-width: 350px;
+  margin: 0 auto;
+  color: getColour(third-color);
+}
+
+label {
+  display: block;
+  margin: 5px 0px;
+}
+
+.submit-admin-btn {
+  margin: 10px 0px;
+  border: 3px solid getColour(primary-color);
+  background: getColour(primary-color);
+  color: getColour(third-color);
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 21px;
+  &:hover {
+    color: getColour(primary-color);
+    background: getColour(third-color);
+  }
+}
+
+.name input,
+.pass input {
+  width: 300px;
+  height: 35px;
+}

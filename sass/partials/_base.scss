@@ -21,3 +21,29 @@ body {
 main {
   margin-top: 80px;
 }
+
+.message {
+  width: 300px;
+  padding: 2rem;
+  margin: 5px auto;
+  border: 1px solid getColour(fourth-color);
+  color: getColour(fourth-color);
+}
+
+.message.error {
+  border-color: red;
+  color: getColour(third-color);
+  background: red;
+}
+
+.message.warning {
+  border-color: orange;
+  color: getColour(third-color);
+  background: orange;
+}
+
+.message.success {
+  border-color: green;
+  color: getColour(third-color);
+  background: green;
+}

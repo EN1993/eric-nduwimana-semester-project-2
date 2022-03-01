@@ -17,8 +17,8 @@
 }
 
 .basket-count {
+  width: 4%;
   border-radius: 50%;
-  border: 2px solid getColour(third-color);
+  background: getColour(fourth-color);
   color: getColour(third-color);
-  text-align: center;
 }
