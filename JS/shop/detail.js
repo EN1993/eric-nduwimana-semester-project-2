@@ -7,7 +7,9 @@ import { baseUrl } from "../api.js";
 import displayMessage from "../components/displayMessage.js";
 const detailContainer = document.querySelector(".detail");
 
-let cartArray = [];
+if (!id) {
+  document.location.href="/shop.html";
+}
 
 async function shopDetail(url) {
   try {

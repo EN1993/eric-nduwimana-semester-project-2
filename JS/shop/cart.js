@@ -17,9 +17,17 @@ const grandTotal = cartItems.reduce(reducer, 0);
   
 
 
-cartContainer.innerHTML = cartItems.map(cartItem => `<div>
-                            <h4>Title: ${cartItem.title}</h4>
-                            <div class='detail-picture' style="background-image:url(${cartItem.imageUrl})"></div>
-                        </div>`)
+cartContainer.innerHTML = cartItems.map(cartItem => `<div class="cart-content">
+                                                        <div class='cart-picture' style="background-image:url(${cartItem.imageUrl})">
+                                                          <button> X </button>
+                                                        </div>
+                                                        <div class= "cart-content-item">
+                                                          <h5> ${cartItem.title}</h5>
+                                                          <h6 class="cart-price">Title: $${cartItem.price}</h6>
+                                                         <a href="shop.html" class='view-more-cart-btn'>View More</a>
+                                                        </div>
+                                                       
+                                                        
+                                                    </div>`)
 
-totalContainer.innerHTML = `<h4>Total: ${grandTotal}</h4>`
+totalContainer.innerHTML = `<h5 class="grand-tot">Total: $${grandTotal}</h5>`

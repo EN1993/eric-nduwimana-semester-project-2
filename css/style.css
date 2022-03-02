@@ -224,7 +224,7 @@ main {
 .message {
   width: 300px;
   padding: 2rem;
-  margin: 5px auto;
+  margin: 0 auto;
   border: 1px solid #0d0d0d;
   color: #0d0d0d;
 }
@@ -301,7 +301,7 @@ figcaption {
 }
 
 h2 {
-  color: #5266a4;
+  color: #5266a3;
   font-size: 35px;
 }
 
@@ -310,7 +310,7 @@ h3 {
 }
 
 h4 {
-  color: #5266a4;
+  color: #5266a3;
   font-size: 22px;
   margin-top: 7px;
 }
@@ -551,15 +551,69 @@ body {
 
 .cart-content {
   width: 300px;
-  height: 100px;
+  min-height: 100px;
   background: #ffffff;
 }
 
 .basket-count {
   width: 4%;
   border-radius: 50%;
-  background: #0d0d0d;
+  background: red;
   color: #ffffff;
+}
+
+.cart-picture {
+  width: 90px;
+  height: 90px;
+  background-size: cover;
+  background-position: center;
+}
+
+.cart-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+}
+
+.cart-content-item {
+  margin: -18px 0px 0px 0px;
+}
+
+.cart-price {
+  margin-top: -11px;
+}
+
+.grand-tot {
+  position: relative;
+  top: 3rem;
+  right: 6rem;
+}
+
+.view-more-cart-btn {
+  border: 3px solid #B0800A;
+  background: #B0800A;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 17px;
+  position: relative;
+  bottom: 9px;
+  text-decoration: none;
+  padding: 2px 7px;
+}
+
+.view-more-cart-btn:hover {
+  color: #B0800A;
+  background: #ffffff;
+}
+
+.fa-trash {
+  background: green;
 }
 
 .admin-section {
@@ -599,5 +653,9 @@ label {
 .pass input {
   width: 300px;
   height: 35px;
+}
+
+.fa-user-circle {
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */

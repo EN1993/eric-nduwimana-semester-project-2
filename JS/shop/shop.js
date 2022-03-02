@@ -1,9 +1,9 @@
 import { baseUrl } from "../api.js";
+import createMenu from "../components/createMenu.js";
 import displayMessage from "../components/displayMessage.js";
-// const baseUrl ='http://localhost:1337';
 const shopContainer = document.querySelector(".shop");
 
-
+createMenu();
 async function shopPosts(url) {
 
   try {

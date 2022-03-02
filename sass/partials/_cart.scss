@@ -12,13 +12,59 @@
 
 .cart-content {
   width: 300px;
-  height: 100px;
+  min-height: 100px;
   background: getColour(third-color);
 }
 
 .basket-count {
   width: 4%;
   border-radius: 50%;
-  background: getColour(fourth-color);
+  background: red;
   color: getColour(third-color);
+}
+
+.cart-picture {
+  width: 90px;
+  height: 90px;
+  background-size: cover;
+  background-position: center;
+}
+
+.cart-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.cart-content-item {
+  margin: -18px 0px 0px 0px;
+}
+
+.cart-price {
+  margin-top: -11px;
+}
+.grand-tot {
+  position: relative;
+  top: 3rem;
+  right: 6rem;
+}
+.view-more-cart-btn {
+  border: 3px solid getColour(further-primary-color);
+  background: getColour(further-primary-color);
+  color: getColour(third-color);
+  font-weight: bold;
+  font-size: 17px;
+  position: relative;
+  bottom: 9px;
+  text-decoration: none;
+  padding: 2px 7px;
+  &:hover {
+    color: getColour(further-primary-color);
+    background: getColour(third-color);
+  }
+}
+
+.fa-trash {
+  background: green;
 }
