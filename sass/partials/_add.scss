@@ -1,0 +1,29 @@
+
+.price input,
+.name input {
+  width: 299px;
+  height: 35px;
+}
+
+.add-container{
+  max-width: 320px;
+  color: getColour(third-color);
+  margin: 2px auto;
+}
+
+.add-product-btn{
+  margin: 10px 0px;
+  border: 3px solid getColour(primary-color);
+  background: getColour(primary-color);
+  color: getColour(third-color);
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 21px;
+  &:hover {
+    color: getColour(primary-color);
+    background: getColour(third-color);
+  }
+}
+
+

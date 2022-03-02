@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,OAAO,CAAC,KAAK;AACb,KAAK,CAAC,KAAK,CAAC;EACV,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;CACb",
+    "sources": [
+        "../sass/partials/add.scss"
+    ],
+    "names": [],
+    "file": "add.css"
+}
