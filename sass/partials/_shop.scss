@@ -27,16 +27,20 @@
 }
 
 .view-more-btn {
-  border: 3px solid getColour(primary-color);
-  color: getColour(fourth-color);
+  color: getColour(third-color);
   width: 300px;
   height: 95px;
   font-weight: bold;
   font-size: 30px;
   position: relative;
-  bottom: 202px;
+  top: 205px;
   display: none;
- 
+  background: getColour(fourth-color);
+  opacity: 0.4;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  
 }
 .shop-content:hover{
   

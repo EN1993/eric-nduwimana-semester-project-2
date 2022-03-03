@@ -22,10 +22,12 @@ async function shopPosts(url) {
                                   
                               <a href="detail.html?id=${currentItem.id}">
                                   <div class="shop-content">
-                                    <div class='featured-picture' style="background-image:url(${baseUrl}${currentItem.image.url})"></div>
+                                    <div class='featured-picture' style="background-image:url(${baseUrl}${currentItem.image.url})">
+                                      <button class="view-more-btn">View More</button>
+                                    </div>
                                     <h4>${currentItem.title}</h4>
                                     <p class="shop-price">Price: $${currentItem.price}</p>
-                                    <button class="view-more-btn">View More</button>        
+                                            
                                   </div>
                                                           
                               </a> `

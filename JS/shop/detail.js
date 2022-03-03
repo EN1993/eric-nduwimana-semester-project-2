@@ -4,13 +4,14 @@ const id = parms.get("id");
 
 // const baseUrl ='http://localhost:1337';
 import { baseUrl } from "../api.js";
+import createMenu from "../components/createMenu.js";
 import displayMessage from "../components/displayMessage.js";
 const detailContainer = document.querySelector(".detail");
-
+/*
 if (!id) {
   document.location.href="/shop.html";
-}
-
+} */
+createMenu();
 async function shopDetail(url) {
   try {
     // JS Reads code top to bottom, left to right
