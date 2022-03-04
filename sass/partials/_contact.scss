@@ -9,6 +9,7 @@
 
 .contactContent {
   width: 250px;
+  font-size: 19px;
 }
 .form-wrapper {
   width: 600px;
@@ -52,7 +53,14 @@ textarea {
   }
 }
 
-.map{
+.adress-cont {
+  color: getColour(secondary-color);
+}
+.openingHour {
+  color: getColour(primary-color);
+}
+
+.map {
   max-width: 1100px;
   margin: 25px auto;
 }

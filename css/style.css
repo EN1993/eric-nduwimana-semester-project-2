@@ -746,6 +746,7 @@ label {
 
 .contactContent {
   width: 250px;
+  font-size: 19px;
 }
 
 .form-wrapper {
@@ -794,6 +795,14 @@ textarea {
 .contact-btn:hover {
   color: #ffb500;
   background: #ffffff;
+}
+
+.adress-cont {
+  color: #7997f7;
+}
+
+.openingHour {
+  color: #ffb500;
 }
 
 .map {
