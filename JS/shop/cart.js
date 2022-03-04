@@ -6,7 +6,7 @@ const cartItems = JSON.parse(localStorage.getItem("cart"));
 const cartContainer= document.querySelector(".cart-list");
 const totalContainer= document.querySelector(".total");
 
-
+createMenu();
 
 // totalContainer.innerHTML = cartItems.price
 // cartContainer.innerHTML = cartItems.
@@ -18,7 +18,7 @@ const reducer = (previousValue, currentValue) => {
 // [1, 2, 3]
 const grandTotal = cartItems.reduce(reducer, 0);
   
-createMenu();
+
 
 cartContainer.innerHTML = cartItems.map(cartItem => `<div class="cart-content">
                                                         <div class='cart-picture' style="background-image:url(${cartItem.imageUrl})">

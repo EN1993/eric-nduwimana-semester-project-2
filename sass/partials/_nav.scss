@@ -69,13 +69,20 @@ li a {
   font-size: 40px;
 }
 
-.fa-user-circle,
-.fa-shopping-basket {
-  font-size: 24px;
+.fa-user-circle {
+  @extend .fas-Common;
+  font-size: 30px;
+}
+
+.fas-Common {
   cursor: pointer;
   &:hover {
     color: getColour(primary-color);
   }
+}
+.fa-shopping-basket {
+  @extend .fas-Common;
+  font-size: 24px;
 }
 .fa-search {
   font-size: 20px;

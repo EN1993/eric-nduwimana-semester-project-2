@@ -26,7 +26,7 @@ nav {
   height: 100%;
 }
 
-@media (min-width: 1124px) {
+@media (min-width: 1397px) {
   nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -42,7 +42,7 @@ nav li {
   display: block;
 }
 
-@media (min-width: 1124px) {
+@media (min-width: 1397px) {
   nav li {
     display: inline-block;
     position: relative;
@@ -66,7 +66,7 @@ li a:hover {
   color: #ffb500;
 }
 
-@media (min-width: 1124px) {
+@media (min-width: 1397px) {
   li a {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -100,15 +100,20 @@ li a:hover {
   font-size: 40px;
 }
 
-.fa-user-circle,
-.fa-shopping-basket {
-  font-size: 24px;
+.fa-user-circle {
+  font-size: 30px;
+}
+
+.fas-Common, .fa-user-circle, .fa-shopping-basket {
   cursor: pointer;
 }
 
-.fa-user-circle:hover,
-.fa-shopping-basket:hover {
+.fas-Common:hover, .fa-user-circle:hover, .fa-shopping-basket:hover {
   color: #ffb500;
+}
+
+.fa-shopping-basket {
+  font-size: 24px;
 }
 
 .fa-search {
@@ -156,7 +161,7 @@ li a:hover {
   border-bottom: 2px solid #ffffff;
 }
 
-@media (min-width: 1124px) {
+@media (min-width: 1397px) {
   header label {
     display: none;
   }
@@ -667,6 +672,14 @@ label {
   color: #ffffff;
 }
 
+#logout {
+  width: auto;
+  font-size: 21px;
+  cursor: pointer;
+  position: relative;
+  bottom: 2px;
+}
+
 .price input,
 .name input {
   width: 299px;
@@ -691,6 +704,28 @@ label {
 }
 
 .add-product-btn:hover {
+  color: #ffb500;
+  background: #ffffff;
+}
+
+.edit-container {
+  max-width: 320px;
+  color: #ffffff;
+  margin: 2px auto;
+}
+
+.edit-product-btn {
+  margin: 10px 0px;
+  border: 3px solid #ffb500;
+  background: #ffb500;
+  color: #ffffff;
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.edit-product-btn:hover {
   color: #ffb500;
   background: #ffffff;
 }

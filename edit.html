@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content=" Admin for Editing product page for the shoes on store, TheShoesOn| Edit">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/bde21681ac.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300&family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+  <title>TheShoesOn| Edit</title>
+</head>
+<body>
+  <div id="navContainer"></div>
+  <div class="wrapper">
+    <main>
+      <section class="admin-section">
+        <h2>Edit Product</h2>
+        <div class="edit-container">
+          <div class="loading"> Loading product</div>
+          <form id="editForm">
+            <div class="message-container"></div>
+            <div class="name" >
+              <label for="Title" > Title</label>
+              <input type="text" id="title"placeholder="type title">
+            </div>
+            <div class="price" >
+              <label for="price">Price</label>
+              <input type="price" id="price" placeholder="type price" >
+            </div>
+            <div class="description">
+              <label for="description">Description</label>
+              <textarea name="description" id="description" cols="38" rows="5" placeholder="type description"></textarea>
+            </div> 
+            <input id="id" type="text">
+            <div>
+              <button type="submit" class="edit-product-btn">Edit Product</button>
+            </div>
+            <hr>
+            <div class="delete-container"></div>
+            
+          </form>
+        </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="footer-contact footer-info">
+          <p>St Olav gate 00</p>
+          <p>Oslo 0011</p>
+          <p>Tel: 22 00 00 00</p>
+        </div>
+        <div class="footer-media footer-info">
+          <p>Shipping & Return</p>
+          <p>FAQ</p>
+          <span class="footer-social">
+            <i class="fab fa-facebook"></i>
+            <i class="fas fa-play-circle"></i> 
+          </span>
+        </div>
+        <div class="footer-subscribe footer-info">
+          <p>Sign up for special offers</p>
+          <input type="text" placeholder="Email Address" class="email-subscribe">
+          <button class="subscribe-btn cta">Subscribe Now</button>
+          <p>&copy;All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="JS/edit.js" type="module"></script>
+  
+</body>
+</html>
