@@ -1,0 +1,58 @@
+.contact-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+}
+
+.contactContent {
+  width: 250px;
+}
+.form-wrapper {
+  width: 600px;
+}
+
+.formContonainer {
+  max-width: 550px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.form-content {
+  max-width: 250px;
+}
+
+.inputContentContact input {
+  width: 240px;
+  height: 35px;
+}
+
+textarea {
+  width: 250px;
+  height: 180px;
+}
+
+.contact-btn {
+  margin: 10px 0px;
+  border: 3px solid getColour(primary-color);
+  background: getColour(primary-color);
+  color: getColour(third-color);
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 21px;
+  &:hover {
+    color: getColour(primary-color);
+    background: getColour(third-color);
+  }
+}
+
+.map{
+  max-width: 1100px;
+  margin: 25px auto;
+}
