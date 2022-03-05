@@ -227,7 +227,7 @@ main {
 }
 
 .message {
-  width: 300px;
+  max-width: 300px;
   padding: 2rem;
   margin: 0 auto;
   border: 1px solid #0d0d0d;
@@ -636,7 +636,7 @@ body {
 }
 
 .admin-container {
-  max-width: 350px;
+  max-width: 300px;
   margin: 0 auto;
   color: #ffffff;
 }
@@ -662,9 +662,8 @@ label {
   background: #ffffff;
 }
 
-.name input,
 .pass input {
-  width: 300px;
+  width: 293px;
   height: 35px;
 }
 
@@ -682,12 +681,16 @@ label {
 
 .price input,
 .name input {
-  width: 299px;
+  width: 293px;
   height: 35px;
 }
 
+.description textarea {
+  width: 293px;
+}
+
 .add-container {
-  max-width: 320px;
+  width: 300px;
   color: #ffffff;
   margin: 2px auto;
 }

@@ -1,17 +1,20 @@
-
 .price input,
 .name input {
-  width: 299px;
+  width: 293px;
   height: 35px;
 }
 
-.add-container{
-  max-width: 320px;
+.description textarea {
+  width: 293px;
+}
+
+.add-container {
+  width: 300px;
   color: getColour(third-color);
   margin: 2px auto;
 }
 
-.add-product-btn{
+.add-product-btn {
   margin: 10px 0px;
   border: 3px solid getColour(primary-color);
   background: getColour(primary-color);
@@ -25,5 +28,3 @@
     background: getColour(third-color);
   }
 }
-
-

@@ -4,7 +4,7 @@
   max-width: 500px;
 }
 .admin-container {
-  max-width: 350px;
+  max-width: 300px;
   margin: 0 auto;
   color: getColour(third-color);
 }
@@ -29,9 +29,8 @@ label {
   }
 }
 
-.name input,
 .pass input {
-  width: 300px;
+  width: 293px;
   height: 35px;
 }
 .fa-user-circle {
