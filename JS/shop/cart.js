@@ -1,7 +1,6 @@
 import createMenu from "../components/createMenu.js";
 
 
-// TODO: Check if getItem actually has an item
 let cartItems = JSON.parse(localStorage.getItem("cart"));
 const cartContainer= document.querySelector(".cart-list");
 const totalContainer= document.querySelector(".total");
@@ -13,8 +12,6 @@ const removeFromCartHandler = (event) => {
   const oldCart = localStorage.getItem("cart"); 
   const parsedOldCart = JSON.parse(oldCart);
 
-  // 1 == "1" // true because loose comparison (compares the values)
-  // 1 === "1" // false because strict comparison (conpares the values AND types)
   if (parsedOldCart) {
     const filteredCart = parsedOldCart.filter(item => {
       return item.id !== selectedCartItemID

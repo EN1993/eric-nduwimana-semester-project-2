@@ -95,12 +95,14 @@ li a {
   right: 24px;
   bottom: -5px;
   color: getColour(primary-color);
+  display: none;
 }
 
 #searchInput {
   display: flex;
   justify-content: center;
   margin-top: 30px;
+  display: none;
   
 }
 
@@ -141,10 +143,12 @@ li a {
     margin-top: 0px;
     position: relative;
     bottom: 6px;
+    
   }
 
   .fa-search {
     bottom: 2px;
     color: getColour(primary-color);
+    
   }
 }

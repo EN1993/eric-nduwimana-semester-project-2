@@ -2,27 +2,20 @@ const querystring = document.location.search;
 const parms = new URLSearchParams(querystring);
 const id = parms.get("id");
 
-// const baseUrl ='http://localhost:1337';
+
 import { baseUrl } from "../api.js";
 import createMenu from "../components/createMenu.js";
 import displayMessage from "../components/displayMessage.js";
 const detailContainer = document.querySelector(".detail");
-/*
-if (!id) {
-  document.location.href="/shop.html";
-} */
+
 createMenu();
 async function shopDetail(url) {
   try {
-    // JS Reads code top to bottom, left to right
-    // back ticks are a new feature for string in javascript
-    // Purpose it to make writing multiline strings easy and readable
-    
-
+   
     const productsUrl = `${url}/products/${id}`;
     const productsResponse = await fetch(productsUrl);
     const resolvedResponse = await productsResponse.json();
-    // console.log(resolvedResponse);
+    
 
     const imageUrl = `${baseUrl}${resolvedResponse.image.url}`;
     const price = resolvedResponse.price;

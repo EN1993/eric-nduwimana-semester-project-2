@@ -1,6 +1,6 @@
 
 import { baseUrl } from "../api.js";
-// const baseUrl ='http://localhost:1337';
+
 const featuredContainer = document.querySelector(".featured");
 
 async function featuredPosts(url) {

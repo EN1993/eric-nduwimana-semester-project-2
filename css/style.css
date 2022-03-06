@@ -127,6 +127,7 @@ li a:hover {
   right: 24px;
   bottom: -5px;
   color: #ffb500;
+  display: none;
 }
 
 #searchInput {
@@ -137,6 +138,7 @@ li a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 30px;
+  display: none;
 }
 
 #searchInput {
@@ -761,22 +763,6 @@ label {
   background: #ffffff;
 }
 
-/*
-.delete-container{
-  margin: 10px 0px;
-  border: 3px solid red;
-  background: red;
-  color: white; 
-  width: 150px;
-  height: 40px;
-  font-weight: bold;
-  font-size: 21px;
-  &:hover {
-    color: white;
-    background: red;
-  }
-}
-*/
 .contact-container {
   padding-top: 15px;
 }
@@ -808,9 +794,12 @@ h3 {
   color: #93acff;
 }
 
+.contactContent p {
+  font-size: 18px;
+}
+
 .contactContent {
   width: 250px;
-  font-size: 19px;
 }
 
 .form-wrapper {
@@ -836,7 +825,7 @@ h3 {
 }
 
 .inputContentContact input {
-  width: 240px;
+  width: 250px;
   height: 35px;
 }
 
@@ -845,19 +834,27 @@ textarea {
   height: 180px;
 }
 
+.submit-contact-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .contact-btn {
-  margin: 10px 0px;
   border: 3px solid #ffb500;
   background: #ffb500;
-  color: #ffffff;
+  color: #0d0d0d;
   width: 150px;
   height: 40px;
+  margin: 10px auto;
   font-weight: bold;
   font-size: 21px;
 }
 
 .contact-btn:hover {
-  color: #ffb500;
   background: #ffffff;
 }
 
@@ -870,7 +867,14 @@ textarea {
 }
 
 .map {
+  padding: 10px;
   max-width: 1100px;
-  margin: 25px auto;
+  margin: 35px auto;
+}
+
+.map iframe {
+  max-width: 1070px;
+  height: 450px;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */
