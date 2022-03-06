@@ -1,10 +1,10 @@
 import { getUsername } from "../admin/storage.js";
 import logoutButton from "./logoutButton.js";
-
+import { renderProducts } from "../shop/shop.js";
 
 
 export default function createMenu() {
-  const{pathname} = document.location;
+  const{ pathname } = document.location;
 
   
 
@@ -30,7 +30,7 @@ export default function createMenu() {
                                   <li><a href="shop.html"class="${pathname === "/shop.html" || pathname === "/detail.html" ? "active" : ""}">Shop</a></li>
                                   <li><a href="about.html"class="${pathname === "/about.html"  ? "active" : ""}">About</a></li>
                                   <li><a href="contact.html"class="${pathname === "/contact.html"  ? "active" : ""}">Contact</a></li>
-                                  <form class="search-form" ><input type="text"placeholder="Search"><i class="fas fa-search"></i></form>
+                                  <form class="search-form" ><input id="searchInput" type="text"placeholder="Search"><i class="fas fa-search"></i></form>
                                   ${authLink} 
                                   <li><a href="cart.html"class="${pathname === "/cart.html"  ? "active" : ""}"><i class="fas fa-shopping-basket"> <span   id="cartCount" class="basket-count"> </span></i></a></li>
                                 </ul>
@@ -38,16 +38,33 @@ export default function createMenu() {
                             </header>`;
 
 
-                            const newItems = [];
-                            const oldItem = localStorage.getItem("cart");
-                            const parsedOldItem = JSON.parse(oldItem); 
-                            if (parsedOldItem) {
-                              newItems.push(...parsedOldItem);
-                            }
-                            const cartCountElement = document.getElementById("cartCount");
-                            if (cartCountElement) {
-                              cartCountElement.innerHTML = newItems.length;
-                            }
-
+  const newItems = [];
+  const oldItem = localStorage.getItem("cart");
+  const parsedOldItem = JSON.parse(oldItem); 
+  if (parsedOldItem) {
+    newItems.push(...parsedOldItem);
+  }
+  const cartCountElement = document.getElementById("cartCount");
+  if (cartCountElement) {
+    cartCountElement.innerHTML = newItems.length;
+  }
   logoutButton();
+  const searchElement = document.getElementById('searchInput')
+
+  const localStorageProducts = JSON.parse(localStorage.getItem('products'))
+  const productsToRender = []
+  searchElement.onkeyup = (value) => {
+    let searchValue = undefined;
+    if (isNaN(value)) {
+      searchValue = value.toLowerCase()
+      const newProducts = localStorageProducts.filter(product => product.title.toLowerCase().includes(searchValue))
+      productsToRender.push(...newProducts)
+    } else {
+      searchValue = parseInt(value)
+      const newProducts = localStorageProducts.filter(product => product.price <= searchValue)
+      productsToRender(...newProducts)
+    }
+    renderProducts(productsToRender)
+  }
 }
+
