@@ -95,18 +95,18 @@ li a {
   right: 24px;
   bottom: -5px;
   color: getColour(primary-color);
+}
+i.fa-search {
   display: none;
 }
-
 #searchInput {
   display: flex;
   justify-content: center;
   margin-top: 30px;
   display: none;
-  
 }
 
-#searchInput  {
+#searchInput {
   width: 118px;
   height: 27px;
   border: none;
@@ -135,20 +135,22 @@ li a {
     margin-left: 60px;
   }
 
-#searchInput {
+  #searchInput {
     display: inline;
   }
-  #searchInput  {
+  #searchInput {
     margin-left: 60px;
     margin-top: 0px;
     position: relative;
     bottom: 6px;
-    
   }
 
   .fa-search {
     bottom: 2px;
     color: getColour(primary-color);
-    
+  }
+
+  i.fa-search {
+    display: inline;
   }
 }

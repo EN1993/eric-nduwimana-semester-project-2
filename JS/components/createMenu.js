@@ -30,7 +30,7 @@ export default function createMenu() {
                                   <li><a href="shop.html"class="${pathname === "/shop.html" || pathname === "/detail.html" ? "active" : ""}">Shop</a></li>
                                   <li><a href="about.html"class="${pathname === "/about.html"  ? "active" : ""}">About</a></li>
                                   <li><a href="contact.html"class="${pathname === "/contact.html"  ? "active" : ""}">Contact</a></li>
-                                  <input id="searchInput" class="search" type="text"placeholder="Search"><i class="fas fa-search"></i>
+                                  <input id="searchInput" class="search" type="text"placeholder="Search"><i class="fas fa-search" ></i>
                                   ${authLink} 
                                   <li><a href="cart.html"class="${pathname === "/cart.html"  ? "active" : ""}"><i class="fas fa-shopping-basket"> <div   id="cartCount" class="basket-count"> </div></i></a></li>
                                 </ul>

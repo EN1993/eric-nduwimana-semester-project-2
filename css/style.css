@@ -127,6 +127,9 @@ li a:hover {
   right: 24px;
   bottom: -5px;
   color: #ffb500;
+}
+
+i.fa-search {
   display: none;
 }
 
@@ -178,6 +181,9 @@ li a:hover {
   .fa-search {
     bottom: 2px;
     color: #ffb500;
+  }
+  i.fa-search {
+    display: inline;
   }
 }
 
