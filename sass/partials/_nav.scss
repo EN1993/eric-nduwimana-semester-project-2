@@ -51,7 +51,12 @@ li a {
 .active {
   font-size: 28px;
   color: getColour(primary-color);
+  i,
+  span {
+    color: inherit;
+  }
 }
+
 .logo img {
   height: 79px;
   display: none;

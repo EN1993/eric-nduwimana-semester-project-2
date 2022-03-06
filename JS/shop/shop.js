@@ -3,7 +3,10 @@ import createMenu from "../components/createMenu.js";
 import displayMessage from "../components/displayMessage.js";
 const shopContainer = document.querySelector(".shop");
 
-export const renderProducts = (productsToRender)  => productsToRender.map(currentItem => shopContainer.innerHTML += ` 
+export const renderProducts = (productsToRender)  => {
+
+shopContainer.innerHTML = ''
+productsToRender.map(currentItem => shopContainer.innerHTML += ` 
                                 
 <a href="detail.html?id=${currentItem.id}">
     <div class="shop-content">
@@ -17,6 +20,7 @@ export const renderProducts = (productsToRender)  => productsToRender.map(curren
                             
 </a> `
 )
+}
 
 createMenu();
 
@@ -30,7 +34,6 @@ async function shopPosts(url) {
     localStorage.setItem('products', JSON.stringify(resolvedResponse))
     renderProducts(resolvedResponse)
   } catch (error) {
-    console.log(error);
     displayMessage("error",error,".shop");
   } 
 }

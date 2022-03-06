@@ -30,7 +30,7 @@ export default function createMenu() {
                                   <li><a href="shop.html"class="${pathname === "/shop.html" || pathname === "/detail.html" ? "active" : ""}">Shop</a></li>
                                   <li><a href="about.html"class="${pathname === "/about.html"  ? "active" : ""}">About</a></li>
                                   <li><a href="contact.html"class="${pathname === "/contact.html"  ? "active" : ""}">Contact</a></li>
-                                  <form class="search-form" ><input id="searchInput" type="text"placeholder="Search"><i class="fas fa-search"></i></form>
+                                  <input id="searchInput" type="text"placeholder="Search"><i class="fas fa-search"></i>
                                   ${authLink} 
                                   <li><a href="cart.html"class="${pathname === "/cart.html"  ? "active" : ""}"><i class="fas fa-shopping-basket"> <span   id="cartCount" class="basket-count"> </span></i></a></li>
                                 </ul>
@@ -49,22 +49,23 @@ export default function createMenu() {
     cartCountElement.innerHTML = newItems.length;
   }
   logoutButton();
-  const searchElement = document.getElementById('searchInput')
 
+  const searchElement = document.getElementById('searchInput')
   const localStorageProducts = JSON.parse(localStorage.getItem('products'))
-  const productsToRender = []
-  searchElement.onkeyup = (value) => {
-    let searchValue = undefined;
-    if (isNaN(value)) {
-      searchValue = value.toLowerCase()
-      const newProducts = localStorageProducts.filter(product => product.title.toLowerCase().includes(searchValue))
-      productsToRender.push(...newProducts)
+
+  searchElement.onkeyup = (event) => {
+    const productsToRender = []
+    let newProducts = undefined
+    let searchValue = event.target.value
+    if (isNaN(searchValue)) {
+      searchValue = event.target.value.toLowerCase();
+      newProducts = localStorageProducts.filter(product => product.title.toLowerCase().includes(searchValue))
     } else {
-      searchValue = parseInt(value)
-      const newProducts = localStorageProducts.filter(product => product.price <= searchValue)
-      productsToRender(...newProducts)
+      searchValue = parseInt(searchValue)
+      newProducts = localStorageProducts.filter(product => product.price <= searchValue)
     }
-    renderProducts(productsToRender)
+    productsToRender.push(...newProducts)
+    renderProducts(productsToRender.length ? productsToRender : localStorageProducts)
   }
 }
 

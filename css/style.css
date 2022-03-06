@@ -82,6 +82,11 @@ li a:hover {
   color: #ffb500;
 }
 
+.active i,
+.active span {
+  color: inherit;
+}
+
 .logo img {
   height: 79px;
   display: none;
