@@ -38,3 +38,8 @@ function getFromStorage(key) {
   }
   return JSON.parse(value);
 }
+
+export function basketCount() {
+  
+  
+}

@@ -8,6 +8,7 @@ import { baseUrl} from "./api.js"
 const form = document.getElementById("addForm");
 const title = document. querySelector("#title");
 const price = document. querySelector("#price");
+const image = document. querySelector("#file");
 const description = document. querySelector("#description");
 const message = document. querySelector(".message-container");
 
@@ -22,7 +23,7 @@ function submitForm(event) {
   const priceValue = parseFloat(price.value);
   const descriptionValue = description.value.trim();
 
-  console.log("priceValue", priceValue)
+ 
 
   if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
     return displayMessage("warning", "Please supply proper values", ".message-container");
@@ -34,11 +35,26 @@ function submitForm(event) {
 
 form.addEventListener("submit", submitForm);
 
+const uploadImage = async (e) => {
+  e.preventDefault();
 
-async function addProduct(title, price, description) {
+  const formData = new FormData()
+
+  formData.append('files', files [0])
+  image.post(baseUrl + "/upload", formData) 
+  
+}
+
+
+async function addProduct(title, price, image, description) {
+  
+
+  
   
   const url = baseUrl + "/products";
-  const data = JSON.stringify({ title: title, price: price, description: description});
+  uploadImage();
+  // console.log("uploadimg:", uploadImage);
+  const data = JSON.stringify({ title: title, price: price, image: image, description: description});
   const token = getToken();
   const options = {
     method: "POST",

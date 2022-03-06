@@ -64,7 +64,7 @@ shopDetail(baseUrl).then((product) => {
     if (parsedOldItem) {
       newItems.push(...parsedOldItem);
     }
-    newItems.push(product);
+    newItems.push({ ...product, id: newItems.length + 1 });
     localStorage.setItem("cart", JSON.stringify(newItems));
     const cartCountElement = document.getElementById("cartCount");
     if (cartCountElement) {

@@ -1,36 +1,60 @@
 import createMenu from "../components/createMenu.js";
 
 
-
-const cartItems = JSON.parse(localStorage.getItem("cart"));
+// TODO: Check if getItem actually has an item
+let cartItems = JSON.parse(localStorage.getItem("cart"));
 const cartContainer= document.querySelector(".cart-list");
 const totalContainer= document.querySelector(".total");
 
+const removeFromCartHandler = (event) => {
+  const newCart = [];
+  console.log("Event: ", event)
+  const selectedCartItemID = parseInt(event.target.value)
+  const oldCart = localStorage.getItem("cart"); 
+  const parsedOldCart = JSON.parse(oldCart);
+
+  // 1 == "1" // true because loose comparison (compares the values)
+  // 1 === "1" // false because strict comparison (conpares the values AND types)
+  if (parsedOldCart) {
+    const filteredCart = parsedOldCart.filter(item => {
+      return item.id !== selectedCartItemID
+    })
+    console.log("Filtered Cart: ", filteredCart)
+    newCart.push(...filteredCart);
+  }
+  localStorage.setItem("cart", JSON.stringify(newCart));
+  const cartCountElement = document.getElementById("cartCount");
+  if (cartCountElement) {
+    cartCountElement.innerHTML = newCart.length;
+  }
+  renderItems(newCart)
+};
+
+const renderItems = (itemsToRender) => {
 createMenu();
 
-// totalContainer.innerHTML = cartItems.price
-// cartContainer.innerHTML = cartItems.
+const reducer = (previousValue, currentValue) => previousValue + currentValue.price
 
-const reducer = (previousValue, currentValue) => {
-    console.log("CURRENT VALUE: ", previousValue, currentValue)
-    return previousValue + currentValue.price
-}
-// [1, 2, 3]
-const grandTotal = cartItems.reduce(reducer, 0);
+const grandTotal = itemsToRender.reduce(reducer, 0);
   
-
-
-cartContainer.innerHTML = cartItems.map(cartItem => `<div class="cart-content">
+cartContainer.innerHTML = itemsToRender.map(cartItem => `<div class="cart-content">
                                                         <div class='cart-picture' style="background-image:url(${cartItem.imageUrl})">
-                                                          <button> X </button>
+                                                          <button id=${cartItem.id} value=${cartItem.id}> X </button>
                                                         </div>
                                                         <div class= "cart-content-item">
                                                           <h5> ${cartItem.title}</h5>
                                                           <h6 class="cart-price">Title: $${cartItem.price}</h6>
                                                          <a href="shop.html" class='view-more-cart-btn'>View More</a>
                                                         </div>
-                                                       
-                                                        
                                                     </div>`)
 
 totalContainer.innerHTML = `<h5 class="grand-tot">Total: $${grandTotal}</h5>`
+}
+
+renderItems(cartItems)
+
+
+cartItems.map((cartItem) => {
+  const removeProductBtn = document.getElementById(cartItem.id)
+  removeProductBtn.addEventListener("click", removeFromCartHandler)
+})

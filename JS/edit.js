@@ -10,7 +10,7 @@ const parms = new URLSearchParams(querystring);
 const id = parms.get("id");
 
 if (!id) {
-  document.location.href="/shop.html";
+  document.location.href="";
 }
 
 const productsUrl = `${url}/products/${id}`;

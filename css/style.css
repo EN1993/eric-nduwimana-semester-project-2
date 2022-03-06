@@ -569,7 +569,7 @@ body {
 }
 
 .basket-count {
-  width: 4%;
+  padding: 5px 10px;
   border-radius: 50%;
   background: red;
   color: #ffffff;
@@ -680,7 +680,8 @@ label {
 }
 
 .price input,
-.name input {
+.name input,
+.file input {
   width: 293px;
   height: 35px;
 }
@@ -731,6 +732,30 @@ label {
 .edit-product-btn:hover {
   color: #ffb500;
   background: #ffffff;
+}
+
+/*
+.delete-container{
+  margin: 10px 0px;
+  border: 3px solid red;
+  background: red;
+  color: white; 
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 21px;
+  &:hover {
+    color: white;
+    background: red;
+  }
+}
+*/
+.contact-container {
+  padding-top: 15px;
+}
+
+.contactFormH {
+  text-align: center;
 }
 
 .contact-wrapper {
