@@ -5,7 +5,11 @@
   top: 40px;
 }
 
-
+.about-head {
+  color: getColour(secondary-color);
+  text-align: center;
+  font-size: 34px;
+}
 
 .about {
   display: flex;

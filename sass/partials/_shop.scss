@@ -1,6 +1,12 @@
-// main {
-//   padding-top: 20px;
-// }
+.shop-head {
+  color: getColour(further-secondary-color);
+  text-align: center;
+  font-size: 34px;
+}
+
+h4 {
+  color: getColour(further-secondary-color);
+}
 
 .shop-price {
   position: relative;
@@ -40,12 +46,9 @@
   border: none;
   text-decoration: none;
   cursor: pointer;
-  
 }
-.shop-content:hover{
-  
-    .view-more-btn{
-      display: block;
-    }
-      
+.shop-content:hover {
+  .view-more-btn {
+    display: block;
+  }
 }

@@ -9,7 +9,7 @@
   color: getColour(primary-color);
   font-size: 22px;
 }
-.footer-contact{
+.footer-contact {
   color: getColour(secondary-color);
 }
 .footer-social {
@@ -34,7 +34,7 @@
   }
   .subscribe-common {
     border: 3px solid getColour(primary-color);
-    color: darken(getColour(primary-color), 10%);
+    color: getColour(fourth-color);
   }
   .subscribe-btn {
     @extend .subscribe-common;
@@ -45,7 +45,7 @@
     font-size: 21px;
     &:hover {
       background: getColour(primary-color);
-      color: getColour(third-color);
+      color: getColour(fourth-color);
     }
   }
 }

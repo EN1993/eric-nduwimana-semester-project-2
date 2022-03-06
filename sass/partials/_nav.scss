@@ -97,21 +97,18 @@ li a {
   color: getColour(primary-color);
 }
 
-.search-form {
+#searchInput {
   display: flex;
   justify-content: center;
   margin-top: 30px;
-  ::placeholder {
-    background: getColour(fourth-color);
-    color: white;
-  }
+  
 }
 
-.search-form input {
+#searchInput  {
   width: 118px;
   height: 27px;
   border: none;
-  border-bottom: 2px solid getColour(third-color);
+  border-bottom: 2px solid getColour(fourth-color);
 }
 
 @media (min-width: $tablet-width) {
@@ -136,10 +133,10 @@ li a {
     margin-left: 60px;
   }
 
-  .search-form {
+#searchInput {
     display: inline;
   }
-  .search-form input {
+  #searchInput  {
     margin-left: 60px;
     margin-top: 0px;
     position: relative;

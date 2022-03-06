@@ -11,12 +11,19 @@
   background-position-x: center;
   background-position-y: center;
 }
-
-h2 {
-  color: getColour(third-color);
+.f-head {
+  color: getColour(secondary-color);
   text-align: center;
   font-size: 34px;
 }
+
+figcaption h4 {
+  color: getColour(fourth-color);
+  text-align: center;
+  position: relative;
+  top: 10px;
+}
+
 .featured-container {
   max-width: 1000px;
   margin: 50px auto 130px auto;

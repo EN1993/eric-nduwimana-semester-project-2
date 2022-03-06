@@ -1,6 +1,13 @@
 .cart-container {
   padding-top: 19px;
 }
+
+.cart-head {
+  color: getColour(secondary-color);
+  text-align: center;
+  font-size: 34px;
+}
+
 .cart {
   max-width: 900px;
   display: flex;
@@ -17,6 +24,7 @@
 }
 
 .basket-count {
+  display: inline;
   padding: 5px 10px;
   border-radius: 50%;
   background: red;
@@ -50,9 +58,9 @@
   right: 6rem;
 }
 .view-more-cart-btn {
-  border: 3px solid getColour(further-primary-color);
-  background: getColour(further-primary-color);
-  color: getColour(third-color);
+  border: 3px solid getColour(primary-color);
+  background: getColour(primary-color);
+  color: getColour(fourth-color);
   font-weight: bold;
   font-size: 17px;
   position: relative;
@@ -60,7 +68,7 @@
   text-decoration: none;
   padding: 2px 7px;
   &:hover {
-    color: getColour(further-primary-color);
+    color: getColour(fourth-color);
     background: getColour(third-color);
   }
 }

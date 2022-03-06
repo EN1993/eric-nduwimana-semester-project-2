@@ -4,7 +4,6 @@ import { getToken } from "./admin/storage.js";
 import { baseUrl} from "./api.js"
 
 
-
 const form = document.getElementById("addForm");
 const title = document. querySelector("#title");
 const price = document. querySelector("#price");
@@ -13,8 +12,9 @@ const description = document. querySelector("#description");
 const message = document. querySelector(".message-container");
 
 createMenu()
+const imageUrl = ''
 function submitForm(event) {
-  console.log("Start start")
+  console.log("Start start", event)
   event.preventDefault();
 
   message.innerHTML="";
@@ -40,11 +40,22 @@ const uploadImage = async (e) => {
 
   const formData = new FormData()
 
-  formData.append('files', files [0])
-  image.post(baseUrl + "/upload", formData) 
-  
+  console.log("E: ", e.target.files[0])
+  formData.append('file', e.target.files[0])
+  const token = getToken();
+  const requestOptions = {
+    method: "PUT",
+    body: JSON.stringify(formData),
+    headers:{
+      "Content-Type": "multipart/form-data",
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const uploadedImage = await fetch(baseUrl + "/upload", requestOptions) 
+  console.log("Uploaded Image: ", uploadedImage)
 }
 
+image.onchange = uploadImage
 
 async function addProduct(title, price, image, description) {
   
@@ -52,9 +63,7 @@ async function addProduct(title, price, image, description) {
   
   
   const url = baseUrl + "/products";
-  uploadImage();
-  // console.log("uploadimg:", uploadImage);
-  const data = JSON.stringify({ title: title, price: price, image: image, description: description});
+  const data = JSON.stringify({ title, price, image, description });
   const token = getToken();
   const options = {
     method: "POST",

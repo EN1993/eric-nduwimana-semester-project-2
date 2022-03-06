@@ -1,10 +1,13 @@
-.edit-container{
+.edit-container {
   max-width: 320px;
-  color: getColour(third-color);
   margin: 2px auto;
 }
-
-.edit-product-btn{
+.edit-head {
+  color: getColour(secondary-color);
+  text-align: center;
+  font-size: 34px;
+}
+.edit-product-btn {
   margin: 10px 0px;
   border: 3px solid getColour(primary-color);
   background: getColour(primary-color);
