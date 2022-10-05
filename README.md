@@ -38,7 +38,7 @@ You can add, edit and delete products in the API and change the Home single type
 
 If you do want to add custom properties, endpoints or additional functionality you can create your own API which must be publicly hosted. 
 
-5. open the link http://localhost:
+5. open the link localhost:
 
 6. type user credentials
 
