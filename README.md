@@ -10,9 +10,9 @@ In this assignment we were to create a login page, where I used Strapi as CMS (C
 ### Built with
 HTML\
 JS\
-Sass\
+Sass
 
-Strapi as (CMS)\
+Strapi as (CMS)
 
 ### Goal
 To create an e-commerce website that has both customer-facing and admin sections. Both sections should be responsive and the website will be populated by a Strapi API supplied by Noroff.
