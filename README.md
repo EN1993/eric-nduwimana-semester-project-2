@@ -22,12 +22,12 @@ This can be done by following the installation of strapi given below.
 
 ### Strapi API Installing
 
-1. - Open the Strapi project:  [Here](https://github.com/NoroffFEU/strapi-sp2)
+1. Open the Strapi project:[Here](https://github.com/NoroffFEU/strapi-sp2)
 
 2. Clone the repo:
 3. Open the repo in VS Studio:
 
-Deploy locally\
+Deploy locally
 
 4. Install the npm dependencies and then run npm run develop:
 
