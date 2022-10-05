@@ -1,6 +1,19 @@
 # eric-nduwimana-semester-project-2
 
 ## Semester Project 2
+
+### Description
+
+In this assignment, I had to code an online shopping site that I had designed, for the assignment described below.
+In this assignment we were to create a login page, where I used Strapi as CMS (Content Management System).
+
+### Built with
+HTML\
+JS\
+Sass\
+
+Strapi as (CMS)\
+
 ### Goal
 To create an e-commerce website that has both customer-facing and admin sections. Both sections should be responsive and the website will be populated by a Strapi API supplied by Noroff.
 
